@@ -8,10 +8,18 @@
 }
 
 .heroButton {
-  background-color: #dc2f2f;
+  background-color: #ff894c;
 }
 
 .herobannerBackground {
   background-image: url("../../../public/herobanner-background.jpg");
   background-position: cover;
+}
+
+.mainDescription {
+  margin: 10px auto;
+}
+
+.pageDivider {
+  margin: 10px auto;
 }

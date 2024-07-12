@@ -11,7 +11,7 @@ export function Herobanner() {
           <button
             className={`${styles.heroButton} text-white p-2.5 rounded-2xl md:mt-10`}
           >
-            Create your own journal
+            Create your journal
           </button>
         </div>
       </div>
