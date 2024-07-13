@@ -71,7 +71,7 @@ export function NavLinksMobile() {
           <div className="block text-center mt-20">
             {links.map((link) => {
               return (
-                <Link href={link.href} key={link.name}>
+                <Link href={link.href} key={link.name} onClick={exitNav}>
                   <p className="p-1.5">{link.name}</p>
                 </Link>
               );
