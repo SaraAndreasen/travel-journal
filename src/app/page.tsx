@@ -2,6 +2,7 @@ import { Herobanner } from "./ui/home-ui/herobanner";
 import TopNavigation from "./ui/TopNavigation";
 import Image from "next/image";
 import styles from "@/app/ui/Home.module.css";
+import { Footer } from "./ui/footer";
 
 export default function Home() {
   return (
@@ -29,7 +30,7 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className="align-center mb-10">
+      <div className="align-center p-10">
         <h2 className="sm:text-left md:text-center text-2xl">
           Write everywhere
         </h2>
@@ -50,7 +51,7 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className="align-center">
+      <div className="align-center p-10">
         <h2 className="sm:text-left md:text-center text-2xl">
           Better with friends
         </h2>
@@ -70,6 +71,9 @@ export default function Home() {
           />
         </div>
       </div>
+      <footer>
+        <Footer />
+      </footer>
     </main>
   );
 }
