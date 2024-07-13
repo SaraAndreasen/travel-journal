@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import clsx from "clsx";
 
 const links = [
   { name: "Home", href: "/home" },
@@ -15,6 +17,7 @@ const links = [
 export function NavLinksMobile() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [showContent, setShowContent] = useState(false);
+  const pathname = usePathname();
 
   const openNav = () => {
     setIsOpen(true);
@@ -71,7 +74,14 @@ export function NavLinksMobile() {
           <div className="block text-center mt-20">
             {links.map((link) => {
               return (
-                <Link href={link.href} key={link.name} onClick={exitNav}>
+                <Link
+                  href={link.href}
+                  key={link.name}
+                  onClick={exitNav}
+                  className={clsx({
+                    "text-[#363636]": pathname === link.href,
+                  })}
+                >
                   <p className="p-1.5">{link.name}</p>
                 </Link>
               );
