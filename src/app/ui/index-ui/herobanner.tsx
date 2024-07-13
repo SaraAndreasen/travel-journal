@@ -9,7 +9,7 @@ export function Herobanner() {
         </h1>
         <div className="flex sm:justify-start md:justify-center">
           <button
-            className={`${styles.heroButton} text-white p-2.5 rounded-2xl md:mt-10`}
+            className={`bg-[#ff894c] hover:bg-[#dc2f2f] text-white p-2.5 rounded-2xl md:mt-10`}
           >
             Create your journal
           </button>
