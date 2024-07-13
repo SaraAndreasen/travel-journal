@@ -1,10 +1,35 @@
-export default function NavLinksDesktop() {
+"use client";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import clsx from "clsx";
+
+const links = [
+  { name: "Home", href: "/home" },
+  {
+    name: "Friends",
+    href: "/friends",
+  },
+  { name: "Travels", href: "/travels" },
+];
+
+export function NavLinksDesktop() {
+  const pathname = usePathname();
   return (
     <>
       <div className="flex justify-around">
-        <p className="p-1.5">login desktop</p>
-        <p className="p-1.5">your travels</p>
-        <p className="p-1.5">friends</p>
+        {links.map((link) => {
+          return (
+            <Link
+              href={link.href}
+              key={link.name}
+              className={clsx({
+                "text-[#ff894c]": pathname === link.href,
+              })}
+            >
+              <p className="p-1.5">{link.name}</p>
+            </Link>
+          );
+        })}
       </div>
     </>
   );
