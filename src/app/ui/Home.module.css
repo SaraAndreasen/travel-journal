@@ -6,3 +6,20 @@
   background: #363636;
   color: #f8f8f8;
 }
+
+.heroButton {
+  background-color: #ff894c;
+}
+
+.herobannerBackground {
+  background-image: url("../../../public/herobanner-background.jpg");
+  background-position: cover;
+}
+
+.mainDescription {
+  margin: 10px auto;
+}
+
+.pageDivider {
+  margin: 10px auto;
+}
