@@ -26,7 +26,7 @@ export function NavLinksDesktop() {
                 "text-[#ff894c]": pathname === link.href,
               })}
             >
-              <p className="p-1.5">{link.name}</p>
+              <p className="p-1.5 hover:text-[#dc2f2f]">{link.name}</p>
             </Link>
           );
         })}
