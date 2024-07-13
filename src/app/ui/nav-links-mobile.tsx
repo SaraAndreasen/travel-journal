@@ -1,6 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
+
+const links = [
+  { name: "Home", href: "/home" },
+  {
+    name: "Friends",
+    href: "/friends",
+  },
+  { name: "Travels", href: "/travels" },
+];
 
 export function NavLinksMobile() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -59,9 +69,13 @@ export function NavLinksMobile() {
           </div>
 
           <div className="block text-center mt-20">
-            <p className="p-1.5">login mobile</p>
-            <p className="p-1.5">your travels</p>
-            <p className="p-1.5">friends</p>
+            {links.map((link) => {
+              return (
+                <Link href={link.href} key={link.name}>
+                  <p className="p-1.5">{link.name}</p>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </div>

@@ -1,13 +1,12 @@
-import { Herobanner } from "./ui/home-ui/herobanner";
+import { Herobanner } from "./ui/index-ui/herobanner";
 import TopNavigation from "./ui/TopNavigation";
 import Image from "next/image";
 import styles from "@/app/ui/Home.module.css";
 import { Footer } from "./ui/footer";
 
-export default function Home() {
+export default function IndexPage() {
   return (
-    <main>
-      <TopNavigation />
+    <>
       <Herobanner />
       <div className="align-center p-10">
         <h2 className="sm:text-left md:text-center text-2xl">
@@ -71,9 +70,6 @@ export default function Home() {
           />
         </div>
       </div>
-      <footer>
-        <Footer />
-      </footer>
-    </main>
+    </>
   );
 }
