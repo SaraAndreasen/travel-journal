@@ -1,6 +1,6 @@
 import styles from "../Home.module.css";
 
-export function Herobanner() {
+export function HeroBanner() {
   return (
     <div className={`${styles.herobannerBackground}`}>
       <div className="bg-white bg-opacity-70 p-24 md:p-32">
